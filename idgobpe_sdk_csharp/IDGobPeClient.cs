@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Diagnostics;
+using System.Net;
 
 /**
  * @author Miguel Pazo (http://miguelpazo.com)
@@ -104,6 +105,7 @@ namespace idgobpe_sdk_csharp
             try
             {
                 System.Net.ServicePointManager.Expect100Continue = false;
+                System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 HttpClient myHttpClient = new HttpClient();
                 myHttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
@@ -134,6 +136,7 @@ namespace idgobpe_sdk_csharp
             try
             {
                 System.Net.ServicePointManager.Expect100Continue = false;
+                System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 FormUrlEncodedContent formContent = new FormUrlEncodedContent(new[]{
                     new KeyValuePair<string, string>("grant_type", "authorization_code"),
