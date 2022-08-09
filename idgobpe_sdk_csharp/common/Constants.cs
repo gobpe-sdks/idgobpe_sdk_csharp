@@ -8,7 +8,8 @@ namespace idgobpe_sdk_csharp.common
     public class Constants
     {
         //ACR
-        public static String ACR_ONE_FACTOR = "one_factor";        
+        public static String ACR_ONE_FACTOR = "one_factor";
+        public static String ACR_TWO_FACTOR = "two_factor";
         public static String ACR_CERTIFICATE_DNIE = "certificate_dnie";
         public static String ACR_CERTIFICATE_TOKEN = "certificate_token";
         public static String ACR_CERTIFICATE_DNIE_LEGACY = "certificate_dnie_legacy";
